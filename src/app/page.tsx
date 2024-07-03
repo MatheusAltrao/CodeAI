@@ -3,32 +3,28 @@ import Header from '@/components/header';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { CornerDownLeft } from 'lucide-react';
-import { FormEvent, useOptimistic, useState, useTransition } from 'react';
-
 import { motion } from 'framer-motion';
-import { Loader } from 'lucide-react';
+import { CornerDownLeft, Loader } from 'lucide-react';
+import { FormEvent, KeyboardEvent, useOptimistic, useState, useTransition } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-type MessageType = {
+interface MessageProps {
   type: 'user' | 'ia';
   content: string;
   id?: string;
   isBold?: boolean;
   isTitle?: boolean;
-};
+}
 
-type ChoiceType = {
+interface ChoiceProps {
   message: { content: string };
-};
+}
 
 export default function Home() {
   const [prompt, setPrompt] = useState<string>('');
-  const [messages, setMessages] = useState<MessageType[]>([]);
-
+  const [messages, setMessages] = useState<MessageProps[]>([]);
   const [isPending, startTransition] = useTransition();
-
-  const [optimisticMessages, addOptimisticMessage] = useOptimistic<MessageType[], MessageType>(
+  const [optimisticMessages, addOptimisticMessage] = useOptimistic<MessageProps[], MessageProps>(
     messages,
     (messages, newMessage) => [...messages, newMessage]
   );
@@ -36,7 +32,7 @@ export default function Home() {
   const handleSendMessage = async (e: FormEvent) => {
     e.preventDefault();
 
-    const userMessage: MessageType = { type: 'user', content: prompt };
+    const userMessage: MessageProps = { type: 'user', content: prompt };
     addOptimisticMessage(userMessage);
 
     startTransition(async () => {
@@ -58,8 +54,8 @@ export default function Home() {
         const result = await response.json();
         setMessages((prev) => [
           ...prev,
-          userMessage, // Add user message to the actual state
-          ...result.choices.map((choice: ChoiceType) => ({
+          userMessage,
+          ...result.choices.map((choice: ChoiceProps) => ({
             type: 'ia',
             content: choice.message.content,
           })),
@@ -70,13 +66,20 @@ export default function Home() {
     });
   };
 
+  const handleSendMessageWithEnter = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage(e);
+    }
+  };
+
   return (
     <div className="h-screen lg:py-10">
       <div className=" lg:rounded-xl  bg-muted/50 w-full max-w-[900px] flex flex-1 flex-col h-full  mx-auto">
         <Header />
 
         <div className="h-full w-full grid grid-rows-[5fr_1fr] ">
-          <div className="row-span-6 p-4 gap-4 flex max-h-[550px] flex-col  flex-1 overflow-y-auto ">
+          <div className="row-span-5 p-4 gap-4 flex max-h-[550px] flex-col  flex-1 overflow-y-auto ">
             {optimisticMessages.map((msg, index) => (
               <motion.div
                 initial={{ opacity: 0, scale: 0.7 }}
@@ -119,12 +122,7 @@ export default function Home() {
                 id="message"
                 placeholder="Pergunte-me qualquer coisa. "
                 className="min-h-28 resize-none font-medium border-0 p-3 shadow-none focus-visible:ring-0"
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    handleSendMessage(e);
-                  }
-                }}
+                onKeyDown={handleSendMessageWithEnter}
               />
               <div className="flex items-center p-3 pt-0">
                 <Button

@@ -75,9 +75,9 @@ html {
 }
 
 .message-ia {
-  @apply rounded-lg  text-sm bg-secondary break-words p-2 max-w-[75%];
+  @apply rounded-lg  text-sm bg-secondary break-words p-2 max-w-[75%] w-max;
 }
 
 .message-user {
-  @apply rounded-lg bg-primary  text-sm break-words  p-2 max-w-[75%] ml-auto;
+  @apply rounded-lg bg-primary  text-sm break-words  p-2 max-w-[75%] ml-auto w-max;
 }
