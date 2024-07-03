@@ -41,7 +41,7 @@ Desenvolver este chat foi uma jornada gratificante e estou ansioso para ver como
 
 # Contato
 
-Dono: Matheus Altrão
-Email: matheusaltrao2@gmail.com
-linkedin:[linkedin.com/matheus-altrao](https://www.linkedin.com/in/matheus-altrao/)
-Portfolio:[www.matheusaltrao.dev](https://www.matheusaltrao.dev/)
+- Dono: Matheus Altrão
+- Email: matheusaltrao2@gmail.com
+- linkedin:[linkedin.com/matheus-altrao](https://www.linkedin.com/in/matheus-altrao/)
+- Portfolio:[www.matheusaltrao.dev](https://www.matheusaltrao.dev/)
