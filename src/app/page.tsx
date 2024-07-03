@@ -60,8 +60,9 @@ export default function Home() {
             content: choice.message.content,
           })),
         ]);
-      } catch (error) {
+      } catch (error: any) {
         console.error('Error sending message:', error);
+        alert(error.message || 'Ocorreu um erro ao enviar a mensagem.');
       }
     });
   };
