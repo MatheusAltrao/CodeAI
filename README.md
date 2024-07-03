@@ -7,7 +7,6 @@
  Feito com Next.js, TailwindCSS, React 19.
 </p>
 
-## Chat com OpenAI
 
 ## Introduction
 
@@ -19,6 +18,8 @@ Estou muito empolgado em compartilhar um projeto recente que desenvolvi: um chat
 Utilizando Next.js, TailwindCSS e explorando as novidades do React 19 com os hooks `useTransition` e `useOptimistic`, consegui criar uma experiência de chat eficiente e responsiva.
 
 [Aqui a documentação com JS](https://lnkd.in/diCFwUMn)
+
+# Features
 
 Para aqueles que desejam consumir a API da OpenAI, é bem simples. Basta acessar a [documentação da OpenAI](https://openai.com/api) e adquirir alguns créditos (tickets). Cada resposta gerada consome uma quantidade variável de tickets, dependendo da complexidade da solicitação e das configurações escolhidas.
 
