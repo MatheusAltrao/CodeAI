@@ -8,7 +8,7 @@
 </p>
 
 
-## Introduction
+## Introdução
 
 Bem-vindo ao repositório do projeto "Chat com OpenAI", uma aplicação que utiliza a API da OpenAI para criar uma experiência de chat eficiente e responsiva. Desenvolvido utilizando Next.js, TailwindCSS e explorando as novidades do React 19 com os hooks `useTransition` e `useOptimistic`.
 
@@ -19,7 +19,7 @@ Utilizando Next.js, TailwindCSS e explorando as novidades do React 19 com os hoo
 
 [Aqui a documentação com JS](https://lnkd.in/diCFwUMn)
 
-# Features
+# Funcionalidades
 
 Para aqueles que desejam consumir a API da OpenAI, é bem simples. Basta acessar a [documentação da OpenAI](https://openai.com/api) e adquirir alguns créditos (tickets). Cada resposta gerada consome uma quantidade variável de tickets, dependendo da complexidade da solicitação e das configurações escolhidas.
 
