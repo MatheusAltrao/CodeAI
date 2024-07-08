@@ -5,7 +5,7 @@ const Header = () => {
         Code <span className="underline decoration-blue-500 underline-offset-4 ">IA</span>
       </h1>
       <p className="text-sm text-muted-foreground">
-        Faça perguntas para a nossa IA especialista em programação.
+        Faça perguntas para a nossa IA especialista em javascript.
       </p>
     </header>
   );
