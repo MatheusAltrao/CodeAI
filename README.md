@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center"> Chat com OpenAI </h1> <br>
+<p align="center">
+    <img src="https://i.pinimg.com/originals/54/12/83/5412837dc4efb7f9dec987894df22ed9.png" alt="Chat com OpenAI">
+</p>
 
-## Getting Started
+<p align="center">
+ Feito com Next.js, TailwindCSS, React 19.
+</p>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Introdução
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Bem-vindo ao repositório do projeto "Chat com OpenAI", uma aplicação que utiliza a API da OpenAI para criar uma experiência de chat eficiente e responsiva. Desenvolvido utilizando Next.js, TailwindCSS e explorando as novidades do React 19 com os hooks `useTransition` e `useOptimistic`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Estou muito empolgado em compartilhar um projeto recente que desenvolvi: um chat utilizando a API da OpenAI! 🧠✨
 
-## Learn More
+Utilizando Next.js, TailwindCSS e explorando as novidades do React 19 com os hooks `useTransition` e `useOptimistic`, consegui criar uma experiência de chat eficiente e responsiva.
 
-To learn more about Next.js, take a look at the following resources:
+[Aqui a documentação com JS](https://lnkd.in/diCFwUMn)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Funcionalidades
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Para aqueles que desejam consumir a API da OpenAI, é bem simples. Basta acessar a [documentação da OpenAI](https://openai.com/api) e adquirir alguns créditos (tickets). Cada resposta gerada consome uma quantidade variável de tickets, dependendo da complexidade da solicitação e das configurações escolhidas.
 
-## Deploy on Vercel
+Existem diversas opções de configuração para utilizar o GPT, como escolher o modelo apropriado: GPT-3.5, GPT-3.5 Turbo, GPT-4.0, GPT-4.0 Turbo, GPT-4.0 Vision, e até mesmo treinar o modelo para se especializar em um tema específico. Você pode personalizar o modelo para responder somente sobre um tema determinado, dar um nome, ajustar a "temperature" (que regula o grau de aleatoriedade das respostas) e definir o número máximo de tokens, entre outras configurações.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para ajustar a "temperature", por exemplo:
+- Valores mais altos, como 0.8, tornam as respostas mais aleatórias.
+- Valores mais baixos, como 0.2, tornam as respostas mais focadas e determinísticas.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Confira o projeto no Figma e o link para o deploy abaixo:
+
+[Link do Figma](https://lnkd.in/dd9SxQwp)
+
+[Link do Projeto](https://lnkd.in/dvHB_mb6)
+
+[Deploy](https://lnkd.in/dhF7jx-2)
+
+Desenvolver este chat foi uma jornada gratificante e estou ansioso para ver como essas tecnologias continuarão a evoluir. Se você tiver interesse em saber mais ou trocar ideias sobre o desenvolvimento com a OpenAI, sinta-se à vontade para entrar em contato!
+
+# Contato
+
+- Dono: Matheus Altrão
+- Email: matheusaltrao2@gmail.com
+- linkedin:[linkedin.com/matheus-altrao](https://www.linkedin.com/in/matheus-altrao/)
+- Portfolio:[www.matheusaltrao.dev](https://www.matheusaltrao.dev/)
