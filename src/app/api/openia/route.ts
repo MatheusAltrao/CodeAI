@@ -3,7 +3,7 @@ import OpenAI from 'openai';
 
 export async function POST(request: Request) {
   let totalTokensUsed = 0;
-  const TOKEN_LIMIT = 1000;
+  const TOKEN_LIMIT = 2000;
 
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY as string,
@@ -12,7 +12,7 @@ export async function POST(request: Request) {
   const { prompt } = await request.json();
 
   const response = await openai.chat.completions.create({
-    model: '',
+    model: 'gpt-3.5-turbo', // Substitua pelo modelo apropriado
     messages: [
       {
         role: 'system',

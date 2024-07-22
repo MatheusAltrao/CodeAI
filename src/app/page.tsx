@@ -33,9 +33,9 @@ export default function Home() {
     e.preventDefault();
 
     const userMessage: MessageProps = { type: 'user', content: prompt };
-    addOptimisticMessage(userMessage);
 
     startTransition(async () => {
+      addOptimisticMessage(userMessage);
       setPrompt('');
 
       try {
