@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     messages: [
       {
         role: 'system',
-        content: 'Sempre responda em pt-BR e seu nome é Code IA',
+        content: 'Sempre responda em pt-BR e seu nome é Code AI',
       },
       { role: 'user', content: prompt },
     ],
